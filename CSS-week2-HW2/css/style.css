@@ -11,10 +11,17 @@ header {
     padding: 10px;
 }
 
-/* 3. Thẻ nav: màu nền */
+/* 3. Thẻ nav: Cập nhật hiển thị inline-block và width ~80% */
 nav {
     background-color: #1976d2;
     padding: 10px;
+    display: inline-block;
+    width: 80%;
+}
+
+/* Thêm mới: Descendant selector chỉnh kích thước ảnh trong nav khoảng 10% */
+nav img {
+    width: 10%;
 }
 
 /* 4. Thẻ main: màu nền và kích thước phông chữ */
@@ -31,11 +38,13 @@ footer {
     text-align: center;
 }
 
-/* 6. Thẻ li: hiển thị và chiều rộng */
+/* 6. Thẻ li: Đã comment out như yêu cầu */
+/* 
 li {
     display: inline-block;
     width: 150px;
-}
+} 
+*/
 
 /* 7. Thẻ h1: căn lề, phông chữ và màu sắc */
 h1 {
@@ -47,4 +56,42 @@ h1 {
 /* 8. Thẻ p: chiều cao dòng */
 p {
     line-height: 1.6;
+}
+
+/* --- CÁC QUY TẮC BỔ SUNG MỚI CHO BÀI WEEK 2 --- */
+
+/* Bổ trưng: Skip to Main Content Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000000;
+    color: #ffffff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Bổ sung: Bố cục Grid 2 cột (~40% mỗi cột) */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-around;
+    align-items: center;
+    row-gap: 20px;
+}
+
+/* Bổ sung: Descendant selector chỉ chỉnh ảnh nằm trong class .grid */
+.grid img {
+    width: 100%;
+}
+
+/* Bổ sung: Bố cục Flexbox */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
